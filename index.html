@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="./index.js"></script>
+    <title>Componente de introdução com formulário de inscrição</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        color: white;
+      }
+      .attribution a {
+        color: hsl(228, 34%, 89%);
+      }
+      .attribution a:hover {
+        color: hsl(226, 34%, 85%);
+      }
+    </style>
+  </head>
+  <body>
+    <div role="main" class="main-container">
+      <div class="main-text">
+        <h1>Aprenda a codar observando outros Devs</h1>
+        <p>
+          Veja como desenvolvedores experientes resolvem problemas em tempo real. Assistindo
+          tutoriais com script é ótimo, mas entender como os desenvolvedores pensam é
+          inestimável.
+        </p>
+      </div>
+      <div class="main-form">
+        <div class="form-info">
+          Teste gratis por 7 dias <span>$ 20 / mês. Depois disso</span>
+        </div>
+        <div class="form-field">
+          <div class="f-name-group input-group">
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              placeholder="Primeiro Nome"
+              required
+            />
+            <img
+              class="error-icon"
+              src="./images/icon-error.svg"
+              alt="Error icon"
+            />
+            <p class="error-text">O primeiro nome não pode estar vazio</p>
+          </div>
+          <div class="l-name-group input-group">
+            <input
+              type="text"
+              name="last-name"
+              id="last-name"
+              placeholder="Último Nome"
+              required
+            />
+            <img
+              class="error-icon"
+              src="./images/icon-error.svg"
+              alt="Error icon"
+            />
+            <p class="error-text">O último nome não pode estar vazio</p>
+          </div>
+          <div class="email-group input-group">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+              onfocus="removeColor()"
+            />
+            <img
+              class="error-icon"
+              src="./images/icon-error.svg"
+              alt="Error icon"
+            />
+            <p class="error-text">Email não pode estar vazio</p>
+            <p class="error-format">Parece que isto não é um e-mail</p>
+          </div>
+          <div class="password-group input-group">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Senha"
+              onkeyup="checkEnter(event)"
+              required
+            />
+            <img
+              class="error-icon"
+              src="./images/icon-error.svg"
+              alt="Error icon"
+            />
+            <p class="error-text">A senha não pode estar vazio</p>
+          </div>
+          <button type="submit" onclick="validateForm()">
+            Solicite sua avaliação gratuita
+          </button>
+          <p class="success-text">Sucesso! Verifique seu e-mail para confirmação.</p>
+
+          <p class="form-note">
+            Ao clicar no botão, você concorda com nossos
+            <span>termos e serviços.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p class="attribution">
+       Codado por <a href="https://github.com/Greg-design">Gregory Ruan</a>.
+      </p>
+    </footer>
+  </body>
+</html>
